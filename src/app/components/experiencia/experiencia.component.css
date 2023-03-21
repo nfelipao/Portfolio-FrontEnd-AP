@@ -1,0 +1,82 @@
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+.btn-circle.btn-lg {
+    width: 40px;
+    height: 40px;
+    padding: 5px 8px;
+    font-size: 20px;
+    line-height: 1.33;
+    border-radius: 5px;
+}
+.main-timeline-5 {
+    position: relative;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .main-timeline-5::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .timeline-5 {
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+  }
+  
+  /* The circles on the timeline */
+  .timeline-5::after {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    right: 1px;
+    background-color: yellow;
+    top: 18px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the right */
+  .right-5 {
+    padding: 0px 0px 20px 40px;
+    left: auto;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right-5::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    left: 30px;
+    border: medium solid black;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent black;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right-5::after {
+    left: -10px;
+  }
+  
+  @media (max-width: 991px) {
+    .main-timeline-5 {
+      max-width: 100%;
+    }
+  }
