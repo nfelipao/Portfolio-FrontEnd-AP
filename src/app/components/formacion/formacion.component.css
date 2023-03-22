@@ -13,3 +13,9 @@
     line-height: 1.33;
     border-radius: 5px;
 }
+.spinner {
+    margin: 0 auto;
+    width: 3rem;
+    height: 3rem;
+    color: black;
+}

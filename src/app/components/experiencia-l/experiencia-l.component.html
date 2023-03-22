@@ -16,7 +16,7 @@
                             {{experiencia.fechaExp}}</span>
                         <p class="mt-2 mb-0 " style="color:white">{{experiencia.descExp}}</p>
                         <p><img src="{{experiencia.imagenExp}}" width="350px" height="220px"
-                                style="border: 2px solid yellow;"></p>
+                                style="border: 2px solid yellow; align-items: center;"></p>
                     </div>
                     <div class="btnconect">
                         <button (click)="onOpenModal('edit' ,experiencia)"
@@ -151,7 +151,7 @@
 <!--No experiencias cargadas-->
 <div *ngIf="experiencia?.length == 0" class="col-lg-12 col-md-12 col-xl-12">
     <div class="alert alert-info" role="alert">
-        <h4 class="alert-heading">Vacio</h4>
-        <p>No fueron encontradas experiencias</p>
+        <h4 class="alert-heading">En espera del servidor</h4>
+
     </div>
 </div>
