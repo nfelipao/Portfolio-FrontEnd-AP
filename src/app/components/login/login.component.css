@@ -5,11 +5,13 @@
   margin-inline: auto;
   margin-top: 150px;
 }
+
 h1 {
   font-weight: bold;
   text-align: center;
   font-size: 2.5em;
 }
+
 .form-control {
   background-color: inherit;
   color: #fff;
@@ -18,20 +20,24 @@ h1 {
   border-radius: 0;
   padding-left: 0;
 }
+
 .form-control:focus {
   background-color: inherit;
   color: #fff;
   box-shadow: none;
   border-color: #fff;
 }
+
 .btn {
   border-radius: 0;
   width: 100%;
   font-weight: bold;
 }
-.btn:hover{
+
+.btn:hover {
   background-color: rgb(138, 138, 53);
 }
+
 .my-form p {
   color: gray;
   text-align: center;
@@ -41,6 +47,7 @@ h1 {
   color: #e1e1e1;
   text-decoration: none;
 }
+
 .my-form p a:hover {
   color: rgb(138, 138, 53);
 }

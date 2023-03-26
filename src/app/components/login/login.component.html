@@ -2,15 +2,15 @@
     <h1><fa-icon [icon]="faUserCircle"></fa-icon> Ingresar</h1>
     <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
         <div class="mb-3 mt-4">
-            <label class="form-label"><fa-icon [icon]="faAt"></fa-icon>    Email</label>
+            <label class="form-label"><fa-icon [icon]="faAt"></fa-icon> Email</label>
             <input type="text" class="form-control" formControlName="email">
         </div>
         <div class="mb-3 mt-4">
-            <label class="form-label"><fa-icon [icon]="faLock"></fa-icon>   Contraseña</label>
+            <label class="form-label"><fa-icon [icon]="faLock"></fa-icon> Contraseña</label>
             <input type="password" class="form-control" formControlName="password">
         </div>
         <button type="submit" class="btn btn-light mt-3"><fa-icon [icon]="faCheck"></fa-icon> CONFIRMAR</button>
     </form>
-    <p class="mt-4">No tienes cuenta? <a (click)="registrarse()" style="cursor: pointer;">Registrarse</a></p>
-    <button type="submit" class="btn btn-light mt-3" (click)="home()"><fa-icon [icon]="faHouse"></fa-icon> INICIO</button>
+    <button type="submit" class="btn btn-light mt-3" (click)="home()"><fa-icon [icon]="faHouse"></fa-icon>
+        INICIO</button>
 </div>

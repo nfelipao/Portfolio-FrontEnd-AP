@@ -8,20 +8,20 @@ import { Proyect } from '../model/proyect';
   providedIn: 'root'
 })
 export class ProyectosService {
-  private apiServerUrl=environment.apiBaseUrl;
+  private apiServerUrl = environment.apiBaseUrl;
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  public getProyect():Observable<Proyect[]>{
+  public getProyect(): Observable<Proyect[]> {
     return this.http.get<Proyect[]>(`${this.apiServerUrl}/api/proyectos`);
   }
-  public addProyect(proyect: Proyect):Observable<Proyect>{
+  public addProyect(proyect: Proyect): Observable<Proyect> {
     return this.http.post<Proyect>(`${this.apiServerUrl}/api/proyectos`, proyect);
   }
-  public updateProyect(proyect: Proyect):Observable<Proyect>{
+  public updateProyect(proyect: Proyect): Observable<Proyect> {
     return this.http.put<Proyect>(`${this.apiServerUrl}/api/proyectos`, proyect);
   }
-  public deleteProyect(proyectId: number):Observable<void>{
+  public deleteProyect(proyectId: number): Observable<void> {
     return this.http.delete<void>(`${this.apiServerUrl}/api/proyectos/${proyectId}`);
   }
 }

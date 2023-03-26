@@ -5,7 +5,6 @@ import {faEdit} from '@fortawesome/free-solid-svg-icons'
 import {faTrash} from '@fortawesome/free-solid-svg-icons'
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Proyect } from 'src/app/model/proyect';
-//import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 import { ProyectosService } from 'src/app/servicios/proyectos.service';
 
 @Component({
@@ -25,7 +24,7 @@ export class ProyectosComponent implements OnInit{
   constructor(private proyectosService: ProyectosService,
               ){}
 
-  //isloged = () => this.autenticacionService.loggedIn()
+
   
   ngOnInit(): void {
       this.getProyect();
@@ -42,61 +41,5 @@ export class ProyectosComponent implements OnInit{
         console.log('error');
       }
     })
-  }
-  public onOpenModal(mode: string, proyect?: Proyect):void{
-    const container=document.getElementById('main-container');
-    const button=document.createElement('button');
-    button.type = 'button';
-    button.style.display = 'none';
-    button.setAttribute('data-toggle', 'modal');
-    if(mode==='add'){
-      button.setAttribute('data-target', '#addProyectModal');
-    }else if(mode==='delete'){
-      this.deleteProyect=proyect;
-      button.setAttribute('data-target', '#deleteProyectModal');
-    }else if(mode==='edit'){
-      this.editProyect=proyect;
-      button.setAttribute('data-target', '#editeProyectModal');
-    }
-    container?.appendChild(button);
-    button.click();
-  }
-  public onAddProyect(addForm: NgForm):void{
-    document.getElementById('add-proyect-form')?.click();
-    this.proyectosService.addProyect(addForm.value).subscribe({
-      next:(response:Proyect)=>{
-        console.log(response);
-        this.getProyect();
-        addForm.reset();
-      },
-      error:(error:HttpErrorResponse)=>{
-        alert(error.message);
-        addForm.reset();
-      },
-    });
-  }
-  public onUpdateProyect(proyect: Proyect): void {
-    this.editProyect = proyect;
-    this.proyectosService.updateProyect(proyect).subscribe({
-      next: (response: Proyect) => {
-        console.log(response);
-        this.getProyect();
-      },
-      error: (error: HttpErrorResponse) => {
-        alert(error.message);
-      },
-    });
-  }
-
-  public onDeleteProyect(IdProy: number): void {
-    this.proyectosService.deleteProyect(IdProy).subscribe({
-      next: (response: void) => {
-        console.log(response);
-        this.getProyect();
-      },
-      error: (error: HttpErrorResponse) => {
-        alert(error.message);
-      },
-    });
   }
 }

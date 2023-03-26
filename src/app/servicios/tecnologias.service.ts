@@ -9,20 +9,20 @@ import { Skill } from '../model/skill';
   providedIn: 'root'
 })
 export class TecnologiasService {
-  private apiServerUrl=environment.apiBaseUrl;
+  private apiServerUrl = environment.apiBaseUrl;
 
-  constructor(private http:HttpClient){}
+  constructor(private http: HttpClient) { }
 
-  public getSkill():Observable<Skill[]>{
+  public getSkill(): Observable<Skill[]> {
     return this.http.get<Skill[]>(`${this.apiServerUrl}/api/skills`);
   }
-  public addSkill(skill: Skill):Observable<Skill>{
+  public addSkill(skill: Skill): Observable<Skill> {
     return this.http.post<Skill>(`${this.apiServerUrl}/api/skills`, skill);
   }
-  public updateSkill(skill:Skill):Observable<Skill>{
+  public updateSkill(skill: Skill): Observable<Skill> {
     return this.http.put<Skill>(`${this.apiServerUrl}/api/skills`, skill);
   }
-  public deleteSkill(skillId: number):Observable<void>{
+  public deleteSkill(skillId: number): Observable<void> {
     return this.http.delete<void>(`${this.apiServerUrl}/api/skills/${skillId}`);
   }
 }

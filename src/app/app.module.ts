@@ -25,7 +25,6 @@ import { TecnologiasService } from './servicios/tecnologias.service';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth, getAuth } from '@angular/fire/auth';
-import { RegisterComponent } from './components/register/register.component';
 import { LoggedComponent } from './components/logged/logged.component';
 import { SobremiLComponent } from './components/sobremi-l/sobremi-l.component';
 import { ExperienciaLComponent } from './components/experiencia-l/experiencia-l.component';
@@ -53,7 +52,6 @@ const routerOptions: ExtraOptions = {
     ExperienciaComponent,
     LoginComponent,
     HomeComponent,
-    RegisterComponent,
     LoggedComponent,
     SobremiLComponent,
     ExperienciaLComponent,
